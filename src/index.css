@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+.shadow-serviceCard {
+    --tw-shadow: 0px 10px 17px -10px rgba(0, 0, 0, .6);
+    --tw-shadow-colored: 0px 10px 17px -10px var(--tw-shadow-color);
+}
+
+.input:focus {
+    outline: none;
+    border: none;
+}
+
+.animate-run {
+    -webkit-animation: run 2s infinite;
+    animation: run 2s infinite;
+}
+
+
+.bg-black {
+   
+    background-color: rgb(0, 0, 0,);
+}
+
+.shadow-serviceCard {
+    box-shadow: 0px 10px 17px -10px rgba(0, 0, 0, .6);
+    color: 0px 10px 17px -10px;
+}
+
+.bg-service-bg {
+    background-image: url("/public/path.png");
+    opacity: .20;
+}
+
+.bg-contain {
+    background-size: cover;
+}
+
+.brightness-100{
+    filter: brightness(-3);
+}
+
+
+.backIm{
+    background-image: url('/public/PurpleBK.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.footerImg{
+     background-image: url('/public/footerIMG.jpg');
+}
+
+
+.aboutImg{
+  background-image: url('/public/PurpleBK.webp');  
+}
+
+.designBk{
+    background-image: url("/public/backPurple4.jpg");
+}
+
+.orderBk{
+    background-image: url("/public/backPurple1.jpg");
+}
+
+.seoBK{
+   background-image: url("/public/seoBK.jpg");  
+}
+
+.graphic{
+    background-image: url("/public/purpleBK9.avif");
+}
