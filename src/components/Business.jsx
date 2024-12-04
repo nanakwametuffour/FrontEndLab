@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/man1.PNG'
+import img from '../assets/teaching.avif'
 export default function Business() {
   return (
     <div className="w-full h-auto py-5 px-4 ">
