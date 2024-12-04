@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/man1.PNG'
+// import img from '../assets/man1.PNG'
 import { portfolio, projects } from '../assets/caruselData';
  
 export default function Portfolio() {
