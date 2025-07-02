@@ -8,6 +8,7 @@ motion;
 export default function Header() {
   const [sideBarState, setSideBarState] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  
   const ref = useRef();
 
   useEffect(() => {
@@ -24,6 +25,8 @@ export default function Header() {
       return true;
     }
   };
+  
+
 
   return (
     <div className="bg-gradient-to-r from-black to-purple-800 shadow shadow-purple-500    w-full px-4 sticky top-0 z-20">

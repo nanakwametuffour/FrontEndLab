@@ -8,7 +8,7 @@ import Service from "./pages/Service";
 import WebDeveloment from "./pages/WebDeveloment";
 import WebDesign from "./pages/WebDesign";
 import Seo from "./pages/Seo";
-import GraphicDesign from "./pages/GraphicDesign";
+// import GraphicDesign from "./pages/GraphicDesign";
 import Order from "./pages/Order";
 import Contact from "./pages/Contact";
 
@@ -21,7 +21,7 @@ export default function App() {
             <Route path="/service" element={<Service />} />
             <Route path="/web-development" element={<WebDeveloment />} />
             <Route path="/web-design" element={<WebDesign />} />
-            <Route path="/graphic-design" element={<GraphicDesign />} />
+            
             <Route path="/seo" element={<Seo />} />
           </Route>
           <Route element={<LayOut />}>

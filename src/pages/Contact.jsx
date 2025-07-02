@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "afcf4fe3-656d-427c-8303-1d322a6af46b");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult(data.message);
+    }
+  };
+
   return (
     <div className="w-full h-auto bg-purple-950 px-4 py-4 lg:py-6">
       <div className="max-w-screen-xl mx-auto h-full bg-black opacity-80 flex flex-col  gap-10 p-4 lg:p-10 rounded-md">
@@ -24,7 +48,10 @@ export default function Contact() {
             </div>
           </div>
           <div className="w-full  py-5 flex flex-col gap-2 lg:gap-4">
-            <form className="w-full flex flex-col  justify-center items-center gap-2">
+            <form
+              onSubmit={onSubmit}
+              className="w-full flex flex-col  justify-center items-center gap-2"
+            >
               <div className="w-full flex flex-col lg:flex-row gap-2 px-4">
                 <div className="w-full border-b border-purple-950 hover:border-purple-600">
                   <input
@@ -198,9 +225,16 @@ export default function Contact() {
               </div>
               <div className="px-6 pt-4 pb-6">
                 <div className="w-48 h-12 bg-gradient-to-r from-black to-purple-950 relative group">
-                  <button type="submit" className="w-48 h-12 bg-purple-900 text-black  font-semibold text-lg absolute -translate-x-2 -translate-y-2 transform group-hover:bg-purple-900 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500">
-                    Send Message
-                  </button>
+                  {result ? (
+                    <span className="py-5 text-green-500 w-full">{resuk}</span>
+                  ) : (
+                    <button
+                      type="submit"
+                      className="w-48 h-12 bg-purple-900 text-black  font-semibold text-lg absolute -translate-x-2 -translate-y-2 transform group-hover:bg-purple-900 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"
+                    >
+                      Send Message
+                    </button>
+                  )}
                 </div>
               </div>
             </form>

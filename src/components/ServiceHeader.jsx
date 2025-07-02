@@ -9,9 +9,12 @@ export default function ServiceHeader() {
     <nav className="w-full bg-gradient-to-r from-black to-purple-800 shadow shadow-purple-500 p-3 sticky top-0 z-50 px-4">
       <div className="w-full flex max-w-6xl mx-auto justify-between items-center">
         <div className="  px-2 border-r-[3px] border-purple-800">
+          <Link to={"/"}>
+          
           <h1 className="text-purple-900 text-2xl [text-shadow:_0_4px_8px_rgba(14_165_223_/_0.5)]  md:text-2xl leading-snug font-manrope font-extrabold">
             FrontEndLab
           </h1>
+          </Link>
         </div>
         <div className="">
           <u className=" gap-10 text-base hidden md:flex lg:flex uppercase">
@@ -35,11 +38,7 @@ export default function ServiceHeader() {
                 SEO
               </span>
             </Link>
-            <Link to={"/graphic-design"}>
-              <span className="text-white hover:text-purple-600 duration-300">
-                Graphic Design
-              </span>
-            </Link>
+           
           </u>
         </div>
         <div className="flex items-center gap-3">
