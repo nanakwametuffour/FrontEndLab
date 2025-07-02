@@ -71,7 +71,7 @@ export default function Header() {
       </div>
       {isOpen && (
         <div className="py-5 px-4 flex justify-center duration-300">
-          <ul className="flex flex-col md:flex-row md:py-8 gap-5 uppercase font-semibold justify-center">
+          <ul className="flex flex-col md:flex-row md:py-7 gap-5 uppercase font-semibold justify-center">
             <Link to={"/"}>
               <li className="text-base font-semibold text-white hover:text-purple-600 ">
                 Home
