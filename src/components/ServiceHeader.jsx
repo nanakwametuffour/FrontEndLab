@@ -77,11 +77,7 @@ export default function ServiceHeader() {
                 SEO
               </span>
             </Link>
-            <Link to={"/graphic"}>
-              <span className="text-white hover:text-purple-600 duration-300">
-                Graphic Design
-              </span>
-            </Link>
+            
           </u>
         </div>
       )}

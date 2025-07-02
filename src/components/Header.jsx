@@ -87,11 +87,7 @@ export default function Header() {
                 service
               </li>
             </Link>
-            <Link to={"/faq"}>
-              <li className="text-base font-semibold text-white hover:text-purple-600 ">
-                faq
-              </li>
-            </Link>
+           
             <Link to={"/contact"}>
               <li className="text-base font-semibold text-white hover:text-purple-600 ">
                 contact
